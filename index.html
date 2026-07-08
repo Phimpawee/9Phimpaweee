@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio | พิมพ์ปวีณ์ เอี่ยมครุฑ</title>
+
+<title>Portfolio | ชื่อ-นามสกุล</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -18,7 +19,7 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#fff8fb;
+background:#fff7fa;
 color:#444;
 }
 
@@ -27,12 +28,12 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
+padding:18px 10%;
 background:white;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 10%;
-box-shadow:0 3px 10px rgba(0,0,0,.08);
+box-shadow:0 3px 15px rgba(0,0,0,.08);
 z-index:1000;
 }
 
@@ -42,8 +43,8 @@ color:#e91e63;
 
 nav a{
 text-decoration:none;
-margin-left:25px;
 color:#555;
+margin-left:25px;
 font-weight:500;
 transition:.3s;
 }
@@ -53,34 +54,39 @@ color:#e91e63;
 }
 
 section{
-padding:120px 10%;
+padding:100px 10%;
 min-height:100vh;
-}
-
-.home{
 display:flex;
+flex-direction:column;
+justify-content:center;
 align-items:center;
-justify-content:space-between;
-flex-wrap:wrap;
+text-align:center;
 }
 
-.home-text{
-max-width:600px;
+.home img{
+width:250px;
+height:250px;
+border-radius:50%;
+object-fit:cover;
+border:8px solid #ffd6e7;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+margin-bottom:25px;
 }
 
-.home-text h1{
+.home h1{
 font-size:55px;
 color:#d81b60;
 }
 
-.home-text h2{
+.home h2{
+margin:15px 0;
 font-size:30px;
-margin:10px 0;
 }
 
-.home-text p{
-margin:20px 0;
+.home p{
+max-width:700px;
 line-height:1.8;
+margin-bottom:30px;
 }
 
 .btn{
@@ -98,37 +104,29 @@ background:#c2185b;
 transform:translateY(-3px);
 }
 
-.home img{
-width:350px;
-border-radius:50%;
-border:8px solid #ffd6e7;
-box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-
 .title{
-text-align:center;
 font-size:40px;
-margin-bottom:50px;
 color:#d81b60;
+margin-bottom:40px;
 }
 
 .card{
 background:white;
-padding:30px;
+width:90%;
+max-width:800px;
+padding:35px;
 border-radius:20px;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
-margin-bottom:30px;
-}
-
-.card h3{
-color:#d81b60;
-margin-bottom:15px;
+line-height:2;
+margin-bottom:25px;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
+width:100%;
+max-width:1100px;
 }
 
 .portfolio-card{
@@ -136,7 +134,7 @@ background:white;
 border-radius:20px;
 overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.4s;
+transition:.3s;
 }
 
 .portfolio-card:hover{
@@ -158,15 +156,6 @@ color:#d81b60;
 padding:0 15px 20px;
 }
 
-.contact{
-text-align:center;
-}
-
-.contact p{
-margin:15px;
-font-size:18px;
-}
-
 footer{
 background:#e91e63;
 color:white;
@@ -174,29 +163,32 @@ text-align:center;
 padding:20px;
 }
 
-@media(max-width:900px){
-
-.home{
-flex-direction:column-reverse;
-text-align:center;
-}
-
-.home img{
-margin-bottom:30px;
-width:250px;
-}
-
-.home-text h1{
-font-size:40px;
-}
+@media(max-width:768px){
 
 header{
-padding:15px 5%;
+flex-direction:column;
+}
+
+nav{
+margin-top:10px;
 }
 
 nav a{
-margin-left:12px;
-font-size:14px;
+margin:8px;
+display:inline-block;
+}
+
+.home h1{
+font-size:38px;
+}
+
+.home h2{
+font-size:24px;
+}
+
+.home img{
+width:180px;
+height:180px;
 }
 
 }
@@ -204,6 +196,7 @@ font-size:14px;
 </style>
 
 </head>
+
 <body>
 
 <header>
@@ -212,7 +205,7 @@ font-size:14px;
 
 <nav>
 <a href="#home">หน้าแรก</a>
-<a href="#profile">ประวัติ</a>
+<a href="#about">ประวัติ</a>
 <a href="#education">การศึกษา</a>
 <a href="#portfolio">ผลงาน</a>
 <a href="#contact">ติดต่อ</a>
@@ -220,27 +213,30 @@ font-size:14px;
 
 </header>
 
+<!-- หน้าแรก -->
+
 <section class="home" id="home">
 
-<div class="home-text">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600" alt="Profile">
 
-<h1>สวัสดีค่ะ</h1>
+<h1>ชื่อ - นามสกุล</h1>
 
-<h2>ฉันคือ พิมพ์ปวีณ์ เอี่ยมครุฑ</h2>
+<h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
 
 <p>
 
-นักเรียนชั้นมัธยมศึกษาปีที่ 6
-มีความสนใจด้านสุขภาพทางการแพทย์
+ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของฉัน
+เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
+ประวัติการศึกษา ผลงาน และช่องทางการติดต่อ
+เพื่อใช้ประกอบการศึกษาต่อและแนะนำตัวเอง
+
 </p>
 
-<a href="#portfolio" class="btn">ชมผลงาน</a>
-
-</div>
-
-<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=700" alt="profile">
+<a href="#about" class="btn">เริ่มต้น</a>
 
 </section>
+
+<!-- ประวัติ -->
 
 <section id="about">
 
@@ -248,25 +244,25 @@ font-size:14px;
 
 <div class="card">
 
-<h3>ข้อมูลส่วนตัว</h3>
+<p><b>ชื่อ :</b> ชื่อ - นามสกุล</p>
 
-<p><strong>ชื่อ :</strong> พิมพ์ปวีณ์ เอี่ยมครุฑ</p>
+<p><b>ชื่อเล่น :</b> ...............</p>
 
-<p><strong>ชื่อเล่น :</strong> เฟิร์ส</p>
+<p><b>อายุ :</b> 18 ปี</p>
 
-<p><strong>อายุ :</strong> 18 ปี</p>
+<p><b>วันเกิด :</b> ...............</p>
 
-<p><strong>วันเกิด :</strong> 24 / 06 /2551</p>
+<p><b>โรงเรียน :</b> ...............</p>
 
-<p><strong>โรงเรียน :</strong> พานทอง</p>
+<p><b>งานอดิเรก :</b> อ่านหนังสือ ฟังเพลง ออกแบบเว็บไซต์</p>
 
-<p><strong>งานอดิเรก :</strong> อ่านหนังสือ อ่านนิยาย ฟังเพลง</p>
-
-<p><strong>ความสามารถ :</strong> เล่นกีฬาแบดมิรตัน ร้องเพลง</p>
+<p><b>ความสามารถ :</b> HTML CSS JavaScript Canva Microsoft Office</p>
 
 </div>
 
 </section>
+
+<!-- การศึกษา -->
 
 <section id="education">
 
@@ -276,27 +272,25 @@ font-size:14px;
 
 <h3>ระดับประถมศึกษา</h3>
 
-<p>โรงเรียนชุมชนวัดหนองตำลึง</p>
+<p>โรงเรียน.....................................</p>
 
-</div>
-
-<div class="card">
+<br>
 
 <h3>ระดับมัธยมศึกษาตอนต้น</h3>
 
-<p>โรงเรียนพานทอง</p>
+<p>โรงเรียน.....................................</p>
 
-</div>
-
-<div class="card">
+<br>
 
 <h3>ระดับมัธยมศึกษาตอนปลาย</h3>
 
-<p>โรงเรียนพานทอง</p>
+<p>โรงเรียน.....................................</p>
 
 </div>
 
 </section>
+
+<!-- ผลงาน -->
 
 <section id="portfolio">
 
@@ -306,31 +300,31 @@ font-size:14px;
 
 <div class="portfolio-card">
 
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600">
 
 <h3>เว็บไซต์ Portfolio</h3>
 
-<p>พัฒนาเว็บไซต์แนะนำตัวเองด้วย HTML และ CSS</p>
+<p>ออกแบบและพัฒนาเว็บไซต์ด้วย HTML และ CSS</p>
 
 </div>
 
 <div class="portfolio-card">
 
-<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600">
 
 <h3>โครงงานวิทยาศาสตร์</h3>
 
-<p>ได้รับรางวัลจากการนำเสนอผลงานระดับโรงเรียน</p>
+<p>ได้รับรางวัลจากการแข่งขันระดับโรงเรียน</p>
 
 </div>
 
 <div class="portfolio-card">
 
-<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700">
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600">
 
 <h3>กิจกรรมจิตอาสา</h3>
 
-<p>เข้าร่วมกิจกรรมเพื่อสังคมและชุมชน</p>
+<p>เข้าร่วมกิจกรรมบริการสังคมและชุมชน</p>
 
 </div>
 
@@ -338,19 +332,21 @@ font-size:14px;
 
 </section>
 
-<section class="contact" id="contact">
+<!-- ติดต่อ -->
+
+<section id="contact">
 
 <h2 class="title">ช่องทางการติดต่อ</h2>
 
 <div class="card">
 
-<p>📧 Email :phimpswee.p2008@gmail.com</p>
+<p>📧 Email : yourname@gmail.com</p>
 
-<p>📱 โทร : 0997452717</p>
+<p>📱 โทรศัพท์ : 08X-XXX-XXXX</p>
 
-<p>💙 Facebook : พิมพ์ปวีณ์ เอี่ยมครุฑ</p>
+<p>📘 Facebook : ชื่อของคุณ</p>
 
-<p>📸 Instagram : @ppimassty</p>
+<p>📷 Instagram : @yourname</p>
 
 <p>💻 GitHub : github.com/yourname</p>
 
