@@ -3,152 +3,364 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio | ชื่อ-นามสกุล</title>
-
-<link rel="stylesheet" href="style.css">
+<title>Portfolio | ชื่อของคุณ</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-</head>
+<style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Prompt',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff8fb;
+color:#444;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+box-shadow:0 3px 10px rgba(0,0,0,.08);
+z-index:1000;
+}
+
+header h2{
+color:#e91e63;
+}
+
+nav a{
+text-decoration:none;
+margin-left:25px;
+color:#555;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#e91e63;
+}
+
+section{
+padding:120px 10%;
+min-height:100vh;
+}
+
+.home{
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+}
+
+.home-text{
+max-width:600px;
+}
+
+.home-text h1{
+font-size:55px;
+color:#d81b60;
+}
+
+.home-text h2{
+font-size:30px;
+margin:10px 0;
+}
+
+.home-text p{
+margin:20px 0;
+line-height:1.8;
+}
+
+.btn{
+display:inline-block;
+padding:14px 35px;
+background:#e91e63;
+color:white;
+text-decoration:none;
+border-radius:40px;
+transition:.3s;
+}
+
+.btn:hover{
+background:#c2185b;
+transform:translateY(-3px);
+}
+
+.home img{
+width:350px;
+border-radius:50%;
+border:8px solid #ffd6e7;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#d81b60;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+margin-bottom:30px;
+}
+
+.card h3{
+color:#d81b60;
+margin-bottom:15px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.portfolio-card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.portfolio-card:hover{
+transform:translateY(-8px);
+}
+
+.portfolio-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.portfolio-card h3{
+padding:15px;
+color:#d81b60;
+}
+
+.portfolio-card p{
+padding:0 15px 20px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:15px;
+font-size:18px;
+}
+
+footer{
+background:#e91e63;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@media(max-width:900px){
+
+.home{
+flex-direction:column-reverse;
+text-align:center;
+}
+
+.home img{
+margin-bottom:30px;
+width:250px;
+}
+
+.home-text h1{
+font-size:40px;
+}
+
+header{
+padding:15px 5%;
+}
+
+nav a{
+margin-left:12px;
+font-size:14px;
+}
+
+}
+
+</style>
+
+</head>
 <body>
 
 <header>
 
-<div class="logo">
-Portfolio
-</div>
+<h2>Portfolio</h2>
 
 <nav>
-
-<a href="#">หน้าแรก</a>
-<a href="#">ประวัติส่วนตัว</a>
-<a href="#">การศึกษา</a>
-<a href="#">ผลงาน</a>
-<a href="#">ติดต่อ</a>
-
+<a href="#home">หน้าแรก</a>
+<a href="#about">ประวัติ</a>
+<a href="#education">การศึกษา</a>
+<a href="#portfolio">ผลงาน</a>
+<a href="#contact">ติดต่อ</a>
 </nav>
 
 </header>
 
+<section class="home" id="home">
 
-<section class="hero">
+<div class="home-text">
 
-<div class="left">
+<h1>สวัสดีค่ะ</h1>
 
-<h3>Hello, I'm</h3>
-
-<h1>ชื่อ นามสกุล</h1>
-
-<h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
+<h2>ฉันคือ ชื่อ-นามสกุล</h2>
 
 <p>
 
-"มุ่งมั่น พัฒนาตนเอง พร้อมเรียนรู้สิ่งใหม่
-เพื่อก้าวสู่ความสำเร็จในอนาคต"
+นักเรียนชั้นมัธยมศึกษาปีที่ 6
+มีความสนใจด้านการพัฒนาเว็บไซต์
+การออกแบบ UI/UX และเทคโนโลยี
+มุ่งมั่นพัฒนาตนเองอยู่เสมอ
+พร้อมเรียนรู้สิ่งใหม่ ๆ และสร้างผลงานที่มีคุณภาพ
 
 </p>
 
-<a href="#" class="button">
-ประวัติส่วนตัว
-</a>
+<a href="#portfolio" class="btn">ชมผลงาน</a>
 
 </div>
 
-<div class="right">
-
-<img src="images/profile.jpg">
-
-</div>
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=700" alt="profile">
 
 </section>
 
+<section id="about">
 
-
-<section class="about">
-
-<h2>เกี่ยวกับฉัน</h2>
+<h2 class="title">ประวัติส่วนตัว</h2>
 
 <div class="card">
 
-<p>
+<h3>ข้อมูลส่วนตัว</h3>
 
-ฉันเป็นนักเรียนระดับชั้นมัธยมศึกษาปีที่ 6
-มีความสนใจด้านเทคโนโลยี การออกแบบเว็บไซต์
-และการพัฒนาโปรแกรม
-มีความรับผิดชอบ ชอบเรียนรู้สิ่งใหม่
-และสามารถทำงานร่วมกับผู้อื่นได้ดี
+<p><strong>ชื่อ :</strong> ชื่อ-นามสกุล</p>
 
-</p>
+<p><strong>ชื่อเล่น :</strong> ....</p>
 
-</div>
+<p><strong>อายุ :</strong> 18 ปี</p>
 
-</section>
+<p><strong>วันเกิด :</strong> ...</p>
 
+<p><strong>โรงเรียน :</strong> ...</p>
 
+<p><strong>งานอดิเรก :</strong> อ่านหนังสือ ฟังเพลง เขียนโปรแกรม ออกแบบเว็บไซต์</p>
 
-<section class="skill">
-
-<h2>ทักษะ</h2>
-
-<div class="skill-box">
-
-<div class="item">
-
-HTML
-
-<div class="bar">
-
-<div style="width:90%"></div>
-
-</div>
-
-</div>
-
-
-<div class="item">
-
-CSS
-
-<div class="bar">
-
-<div style="width:85%"></div>
-
-</div>
-
-</div>
-
-
-<div class="item">
-
-JavaScript
-
-<div class="bar">
-
-<div style="width:70%"></div>
-
-</div>
-
-</div>
-
-
-<div class="item">
-
-Canva
-
-<div class="bar">
-
-<div style="width:95%"></div>
-
-</div>
-
-</div>
+<p><strong>ความสามารถ :</strong> HTML CSS JavaScript Canva Microsoft Office</p>
 
 </div>
 
 </section>
 
+<section id="education">
 
+<h2 class="title">ประวัติการศึกษา</h2>
+
+<div class="card">
+
+<h3>ระดับประถมศึกษา</h3>
+
+<p>โรงเรียน....................................</p>
+
+</div>
+
+<div class="card">
+
+<h3>ระดับมัธยมศึกษาตอนต้น</h3>
+
+<p>โรงเรียน....................................</p>
+
+</div>
+
+<div class="card">
+
+<h3>ระดับมัธยมศึกษาตอนปลาย</h3>
+
+<p>โรงเรียน....................................</p>
+
+</div>
+
+</section>
+
+<section id="portfolio">
+
+<h2 class="title">ผลงาน</h2>
+
+<div class="grid">
+
+<div class="portfolio-card">
+
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700">
+
+<h3>เว็บไซต์ Portfolio</h3>
+
+<p>พัฒนาเว็บไซต์แนะนำตัวเองด้วย HTML และ CSS</p>
+
+</div>
+
+<div class="portfolio-card">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700">
+
+<h3>โครงงานวิทยาศาสตร์</h3>
+
+<p>ได้รับรางวัลจากการนำเสนอผลงานระดับโรงเรียน</p>
+
+</div>
+
+<div class="portfolio-card">
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700">
+
+<h3>กิจกรรมจิตอาสา</h3>
+
+<p>เข้าร่วมกิจกรรมเพื่อสังคมและชุมชน</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2 class="title">ช่องทางการติดต่อ</h2>
+
+<div class="card">
+
+<p>📧 Email : yourname@gmail.com</p>
+
+<p>📱 โทร : 08X-XXX-XXXX</p>
+
+<p>💙 Facebook : ชื่อของคุณ</p>
+
+<p>📸 Instagram : @yourname</p>
+
+<p>💻 GitHub : github.com/yourname</p>
+
+</div>
+
+</section>
 
 <footer>
 
