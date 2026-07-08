@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>ประวัติการศึกษา</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header>
+<h1>ประวัติการศึกษา</h1>
+
+<nav>
+<a href="index.html">หน้าแรก</a>
+<a href="profile.html">ประวัติส่วนตัว</a>
+<a href="education recrod.html">ประวัติการศึกษา</a>
+<a href="projects.html">ผลงาน</a>
+<a href="contact.html">ติดต่อ</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h2>ประวัติการศึกษา</h2>
+
+<ul>
+
+<li>ประถมศึกษา : โรงเรียนชุมชนวัดหนองตำลึง</li>
+
+<li>มัธยมศึกษาตอนต้น : โรงเรียนพานทอง</li>
+
+<li>มัธยมศึกษาตอนปลาย : โรงเรียนพานทอง</li>
+
+</ul>
+
+</div>
+
+</body>
+</html>
